@@ -1,7 +1,7 @@
 // #67kfznmiMl
 // – Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль.
 
-let qwe =[ 10, 'vasya', true, 213, 'hello world', false, 9504, 'name', 0.2, -921];
+let qwe =[ 10, 'vasya', true, 213, undefined, false, {}, [], null, NaN];
 
 console.log(qwe[0]);
 console.log(qwe[1]);
