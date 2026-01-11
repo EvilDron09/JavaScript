@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // let color ='green';
+    // if (color === 'red') {
+    //     console.log('stop');
+    // }else{
+    //     console.log('go');
+    // }
+    //
+
+    // let age = +prompt('enter your age');
+    // if (age >= 18) {
+    //     console.log('obult');
+    // }else{
+    //     console.log('cartoon');
+    // }
+
+    let color = prompt('enter color!');
+    let isRoodClear = confirm('is road clear?');
+    if (color === 'green' && isRoodClear) {
+        console.log('go');
+
+    }else if (color === 'yellow'){
+        console.log('wait');
+    }else if (color === 'red') {
+        console.log('stop');
+    }else {
+        console.log('error');
+    }
+</script>
+</body>
+</html>
