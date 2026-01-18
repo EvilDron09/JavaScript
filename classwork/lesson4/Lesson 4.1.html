@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // function writer(productTitle, price, descr) {
+    //     document.write(
+    //         `
+    //         <div>
+    //         <h2>${productTitle} ${price}</h2>
+    //         <p>${descr}</p>
+    //         </div>
+    //         `
+    //     );
+    // }
+    //
+    // writer('milk', 32, 'some milk');
+    // writer('meat', 150, 'auegrugafjag');
+
+    function userFactory(id, name, age, status) {
+        let user ={
+            id: id,
+            name: name,
+            age: age,
+            status: status,
+        }
+        return user;
+    }
+
+    let u1 = userFactory(1, 'kokos', 123, true);
+    let u2 = userFactory(1, 'abrikos', 324, false);
+    let u3 = userFactory(1, 'tomat', 535, false);
+    let u4 = userFactory(1, 'cucumber', 678, true);
+    console.log(u1);
+    console.log(u2);
+    console.log(u3);
+    console.log(u4);
+
+
+</script>
+</body>
+</html>

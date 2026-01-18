@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // function calc(a,b){
+    //     let result = a + b;
+    //     return result;
+    // }
+    //
+    // let r1 = calc(10 , 20);
+    // let r2 = calc(20, 22);
+    // console.log(r1, r2);
+
+    function percentage(cash, per){
+        return cash / 100 * per;
+    }
+
+    function tax(sum){
+        return sum - percentage(sum, 20)-percentage(sum,1.5);
+    }
+    let number = tax(10000);
+    console.log(number);
+
+</script>
+</body>
+</html>
