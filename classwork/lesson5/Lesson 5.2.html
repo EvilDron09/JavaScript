@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let user ={
+        name: 'vasya',
+        age:31,
+        greeting: function (msg){
+            console.log(this);
+            return `${msg} my name is ${this.name}`
+        },
+        vitanny: (msg)=> `${msg} my ade is ${this.age}`
+    }
+
+    console.log(user.greeting('hi'));
+    console.log(user.vitanny('hello'))
+
+    function asd() {
+        let x = 10;
+        function inner() {
+            return ++x;
+        }
+        return inner
+    }
+
+    console.log(asd()())
+
+    function userBuilding(name,age){
+        let user = {name, age};
+        return{
+            getName(){
+                return user.name
+            },
+            getAge(){
+                return user.age
+            },
+            setAge(){
+                if(age>0){
+                    user.age = age
+                }
+            }
+        }
+    }
+let builder = userBuilding('vasya', 32)
+    console.log(builder)
+    console.log(builder.getName())
+    builder.setAge(100)
+</script>
+</body>
+</html>
