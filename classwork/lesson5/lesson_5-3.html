@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // -----Рекурсія-----
+
+
+    // function iterator(arr, i) {
+    //     console.log(arr[i]);
+    //     i++;
+    //     if(i < arr.length){
+    //         iterator(arr, i);
+    //     }
+    // }
+    //
+    // iterator([11,22,33], 0);
+
+    let arr = [11,22,33,[44,55]];
+
+    let innerArray = [];
+
+    function flatter(array) {
+        for (const item of array) {
+            if (Array.isArray(item)){
+                flatter(item)
+            }else{
+                innerArray.push(item)
+            }
+        }
+    }
+
+    flatter(arr);
+    console.log(innerArray);
+
+    // ----Генератори-----
+
+    function* foo() {
+        yield 100;
+        yield 200;
+        yield 300;
+    }
+
+    let fooGenerator = foo();
+
+    console.log(fooGenerator);
+    console.log(fooGenerator.next());
+    console.log(fooGenerator.next());
+    console.log(fooGenerator.next());
+    console.log(fooGenerator.next());
+
+    function* cardsHolder() {
+        const cards = [
+            {value:6, suite:'diamond'},
+            {value:7, suite:'spade'},
+            {value:8, suite:'diamond'},
+            {value:9, suite:'spade'},
+        ];
+        for (const card of cards) {
+            yield card;
+        }
+    }
+    const cardsHolderGenerator = cardsHolder();
+    console.log(cardsHolderGenerator.next());
+
+    // ----Обробка полика------
+
+    // console.log('start');
+    // try{
+    //     // console.log(a);
+    //     console.log('try block')
+    // } catch (e){
+    //     console.error(e);
+    // }
+    // finally{
+    //     console.log('finally block');
+    // }
+    // console.log('end');
+
+    function calc(a,b){
+        if (b === 0){
+            throw new Error('b is 0');
+        }
+        return a/b;
+    }
+
+    calc(10, 0);
+
+
+</script>
+</body>
+</html>
