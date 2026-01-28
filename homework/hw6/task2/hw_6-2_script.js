@@ -17,6 +17,23 @@ let cardSuit = [ 'spade','diamond','heart', 'clubs'];
 let meaning = ['6', '7', '8', '9', '10', 'ace','jack','queen','king'];
 let color = ['red','black'];
 
+function cardSuitRed  (color, cardSuit){
+    for (const colorElement of color) {
+        if(colorElement === 'red'){
+             red =[cardSuit[1], cardSuit[2]]
+        }
+    }
+    return red
+}
+function cardSuitBlack  (color, cardSuit){
+    for (const colorElement of color) {
+        if(colorElement === 'black'){
+             black =[cardSuit[0], cardSuit[3]]
+        }
+    }
+    return black
+}
+
 function deskOfCardsSpadeAce(cardSuit, meaning) {
     let spadeAce;
     for (const spade of cardSuit) {
@@ -41,10 +58,20 @@ let sliceMeaning = meaning.slice(0,1);
 }
  console.log(asd);
 
+ console.log(cardSuitRed(color,cardSuit).concat(meaning));
 
+ let qwe =''
+for (const item of meaning) {
+    qwe += ' ' + cardSuit[1] + ' ' + item
+}
+console.log(qwe);
 
-
-
+let sliceMeaningClubs = meaning.slice(3,meaning.length);
+let zxc =''
+for (const item of sliceMeaningClubs) {
+    zxc += ' ' + cardSuit[3]+ ' ' + item
+}
+console.log(zxc);
 
 // #EP5I1UUzAX
 // Взяти описану колоду карт, та за допомогою reduce “упакувати” всі карти по “мастях” в об’єкт
@@ -55,3 +82,15 @@ let sliceMeaning = meaning.slice(0,1);
 //   hearts:[],
 //   clubs:[]
 // }
+
+
+let desk = meaning.reduce((suits, values) =>{
+    for (const item of values) {
+        suits.spades.push(values);
+        suits.diamonds.push(values);
+        suits.hearts.push(values);
+        suits.clubs.push(values);
+    }
+    return suits
+}, {spades:[],diamonds:[],hearts:[],clubs:[]});
+console.log(desk)
