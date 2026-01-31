@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    let now = new Date();
+    console.log(now);
+    console.log(now.getFullYear());
+    console.log(now.getTime());
+    console.log(now.getDate());
+    console.log(now.getMonth());
+    console.log(now.getDay());
+    console.log(now.getHours());
+    console.log(now.getMinutes());
+    console.log(now.getMilliseconds());
+    console.log(now.getSeconds());
+
+    let data1 = new Date(1769797104378);
+    let data2 = new Date("June 10 1991 12:39:40");
+    let data3 = new Date(1987,0,30,12,30,50,0);
+    console.log(data1);
+    console.log(data2);
+    console.log(data3);
+
+    data3.setDate(31);
+    console.log(data3);
+
+    let user = {
+        id: 1,
+        name: 'kokos',
+        bday: new Date(1769797104378),
+    }
+
+    console.log(user)
+
+</script>
+
+</body>
+</html>
