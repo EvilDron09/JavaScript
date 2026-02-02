@@ -67,7 +67,7 @@ let clients = [
     new Client(5,'tanya', 'petrova', 'gfdgjdio@gmail.com', '+380536738278',
         [new Products('monitor', 25000)]),
     new Client(6,'andrey', 'ivanov', 'ajsdiji@gmail.com','+380436534567',
-        [new Products('keyboard', 1500, 'computer mouse', 600), new Products('headphones', 1000)]),
+        [new Products('keyboard', 1500,), new Products('computer mouse', 600), new Products('headphones', 1000)]),
     new Client(7,'natalia', 'petrova', 'jijiasjai@gmail.com', '+380345245234',
         [new Products('fridge', 30000)]),
     new Client(8,'nikita','ivanov', 'dasd4321@gmail.com','+380694837342',
@@ -79,3 +79,145 @@ let clients = [
 ]
 
 console.log(clients)
+
+// #8abtVjRv
+// // – Взяти масив (Client [] з попереднього завдання). Відсортувати його за кількістю товарів в полі order по зростанню. (sort)
+
+console.log(clients.sort((a,b) => a.order.length - b.order.length));
+
+// #vV9a6584I5
+// – Створити функцію конструктор, яка дозволяє створювати об’єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість,
+// об’єм двигуна. додати в об’єкт функції:
+//     — drive () – яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+//     — info () – яка виводить всю інформацію про автомобіль в форматі `назва поля – значення поля`
+//     — increaseMaxSpeed (newSpeed) – яка підвищує значення максимальної швидкості на значення newSpeed
+//     — changeYear (newValue) – змінює рік випуску на значення newValue
+//     — addDriver (driver) – приймає об’єкт який “водій” з довільним набором полів, і додає його в поточний об’єкт car
+
+function Car(model, producer, year,maxSpeed, engineVolume) {
+    this.model = model;
+    this.producer = producer;
+    this.year = year;
+    this.maxSpeed = maxSpeed;
+    this.engineVolume = engineVolume;
+    this.drive = function () {
+        console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
+    }
+    this.info = function (){
+        for (const key in this) {
+            console.log(key,this[key]);
+        }
+    }
+    this.increaseMaxSpeed = function (maxSpeed) {
+        if(maxSpeed > 0) this.maxSpeed = this.maxSpeed + maxSpeed;
+    }
+    this.changeYear = function (newYear) {
+        if(newYear > 1812) this.year = newYear;
+    }
+    this.addDriver = function (driver) {
+        if(driver) this.driver = driver;
+    }
+}
+
+const car = new Car('911', 'Porsche', 1998, 230, 2,2);
+console.log(car);
+car.drive();
+car.info();
+car.increaseMaxSpeed(100);
+console.log(car);
+car.changeYear(2004);
+console.log(car);
+car.addDriver({name: 'vasya', surname: 'pupkin'});
+console.log(car);
+
+// #5kla3yMpgp
+// – (Те саме, тільки через клас)
+// Створити клас, який дозволяє створювати об’єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об’єм двигуна. додати в об’єкт функції:
+//     — drive () – яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+//     — info () – яка виводить всю інформацію про автомобіль в форматі `назва поля – значення поля`
+//     — increaseMaxSpeed (newSpeed) – яка підвищує значення максимальної швидкості на значення newSpeed
+//     — changeYear (newValue) – змінює рік випуску на значення newValue
+//     — addDriver (driver) – приймає об’єкт, який “водій” з довільним набором полів, і додає його в поточний об’єкт
+
+class CarClass{
+
+    constructor(model, producer, year, maxSpeed, engineVolume) {
+        this.model = model;
+        this.producer = producer;
+        this.year = year;
+        this.maxSpeed = maxSpeed;
+        this.engineVolume = engineVolume;
+    }
+
+    drive(){
+        console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
+    }
+    info(){
+        for (const key in this) {
+            console.log(key,this[key]);
+        }
+    }
+    increaseMaxSpeed(maxSpeed){
+        if(maxSpeed > 0) this.maxSpeed = this.maxSpeed + maxSpeed;
+    }
+    changeYear(newYear){
+        if(newYear > 1812) this.year = newYear
+    }
+    addDriver(driver){
+        if(driver) this.driver = driver;
+    }
+}
+const carClass = new CarClass('911', 'Porsche', 1998, 230, 2,2);
+console.log(carClass);
+carClass.drive();
+carClass.info();
+carClass.increaseMaxSpeed(100);
+console.log(carClass);
+carClass.changeYear(2004);
+console.log(carClass);
+carClass.addDriver({name: 'vasya', surname: 'pupkin'});
+console.log(carClass);
+
+// #zg6Fifnqig
+// – створити клас/функцію конструктор попелюшка з полями ім’я, вік, розмір ноги. Створити масив з 10 попелюшок.
+//     Створити об’єкт класу “принц” за допомоги класу який має поля ім’я, вік, туфелька яку він знайшов.
+//     За допомоги циклу знайти, яка попелюшка повинна бути з принцом.
+// ! Додатково, знайти необхідну попелюшку за допомогою функції масиву find та відповідного колбеку
+
+class Cinderella {
+    constructor(name, age, footSize) {
+        this.name = name;
+        this.age = age;
+        this.footSize = footSize;
+    }
+}
+class Prince {
+    constructor(name, age, slipper) {
+        this.name = name;
+        this.age = age;
+        this.slipper = slipper;
+    }
+}
+
+const  cinderellas  =[
+    new Cinderella('cinderella1', 20,34),
+    new Cinderella('cinderella2', 21, 35),
+    new Cinderella('cinderella3', 23, 36),
+    new Cinderella('cinderella4', 25,37),
+    new Cinderella('cinderella5', 22,38),
+    new Cinderella('cinderella6', 26, 39),
+    new Cinderella('cinderella7', 24, 40),
+    new Cinderella('cinderella8', 26, 41),
+    new Cinderella('cinderella9', 25,42),
+    new Cinderella('cinderella10', 24,43),
+]
+
+const prince = new Prince('prince', 27,37);
+
+for (const cinderella of cinderellas) {
+    if(cinderella.footSize === prince.slipper){
+        console.log(cinderella);
+    }
+}
+
+console.log(cinderellas.find(cinderella =>cinderella.footSize === prince.slipper));
