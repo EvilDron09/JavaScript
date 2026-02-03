@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    // let user = {
+    //
+    // }
+    // user?.name?.fn;
+
+    // let name = 'vasya';
+    // let age =31;
+    // let user = {
+    //     name,
+    //     age,
+    //     foo (){
+    //         console.log(foo);
+    //     }
+    // };
+    //
+    // console.log(user);
+    // user.foo();
+
+    // let user2 = {
+    //    name: 'vasya',
+    //     age: 31,
+    //     foo (){
+    //         console.log(foo);
+    //     }
+    // };
+    //
+    // let {name, foo} = user2;
+    // console.log(name);
+    // // console.log(age);
+    // foo()
+    //
+    // function asd({name}) {
+    //     console.log(name);
+    // }
+    //
+    // let obj = {a: 'asdfgf', name:'fwerfd'};
+    // asd(obj)
+    //
+    // let {statys} = user2
+    // console.log(statys)
+
+    let name1 = 'vasya';
+    let age1 =31;
+    let user3 = {
+        name1,
+        age1,
+        foo (){
+            console.log(foo);
+        },
+        wife:{
+            name: 'anna',
+        },
+    };
+
+    let {name1: userName, age1: userAge, wife: {name: userWife}, wife} =user3;
+    console.log(userName,userAge, userWife);
+    console.log(wife)
+
+    let [a, ,c]=[11,22,33];
+    console.log(a,c);
+
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+
+    let [{name,age,status}, user2] = users;
+    console.log(name,age,status);
+    console.log(user2);
+
+</script>
+
+</body>
+</html>
