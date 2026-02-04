@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // let user = {
+    //     name: 'vasya',
+    //     age: 23,
+    // }
+    //
+    // let userCopy = {...user};
+    // console.log(userCopy);
+    // console.log(userCopy === user);
+    // userCopy.age = 0;
+    // console.log(userCopy);
+    // console.log(user);
+    //
+    // let nums = [11,22,33];
+    // let nums2 = [...nums];
+    // console.log(nums2);
+
+    let user ={
+        name: 'vasya',
+        skills: ['html','js'],
+        greeting () {
+        }
+    }
+
+    let userClone = {...user};
+    console.log(userClone === user);
+    console.log(user.skills === userClone.skills);
+
+    let userJsonClone = JSON.stringify(user);
+    console.log(userJsonClone);
+    let parse = JSON.parse(userJsonClone);
+    console.log(parse);
+    console.log(user);
+    console.log(parse === user);
+    console.log(parse.skills === user.skills);
+
+    let assign = Object.assign({}, user);
+    console.log(assign);
+    console.log(assign === user);
+    console.log(assign.skills === user.skills);
+
+
+
+
+</script>
+
+</body>
+</html>
