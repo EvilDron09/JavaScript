@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Before</h1>
+<div id="target" xxx="???" class="point">
+    <b>Lorem ipsum dolor</b> sit amet, consectetur adipisicing elit. <span>Deleniti distinctio illum</span> itaque natus nobis officia veritatis. Ad alias aut eius eligendi inventore necessitatibus, nihil non officia, perferendis qui repellendus vero!
+</div>
+<div xxx="???" class="point">
+    <b>Lorem ipsum dolor</b> sit amet, consectetur adipisicing elit. <span>Deleniti distinctio illum</span> itaque natus nobis officia veritatis. Ad alias aut eius eligendi inventore necessitatibus, nihil non officia, perferendis qui repellendus vero!
+</div>
+<div  xxx="???" class="point">
+    <b>Lorem ipsum dolor</b> sit amet, consectetur adipisicing elit. <span>Deleniti distinctio illum</span> itaque natus nobis officia veritatis. Ad alias aut eius eligendi inventore necessitatibus, nihil non officia, perferendis qui repellendus vero!
+</div>
+<h2> after </h2>
+<script>
+    // let target = document.getElementById('target');
+    // console.log(target.innerText);
+    // // target.innerText = 'okten';
+    // target.style.background = 'silver';
+    // // console.log(target.classList);
+    // target.classList.add('foo');
+    // target.classList.add('bar');
+    // // console.log(target.classList.item(0));
+    // // // console.log(target.classList.contains('bar'));
+    // // target.classList.toggle('asd');
+    //
+    // // console.log(target.getAttribute('xxx'));
+    // // console.log(target.getAttribute('id'));
+    // // console.log(target.getAttribute('class'));
+    // // console.log(target.getAttribute('style'));
+    // // target.setAttribute('id','qdfsgege');
+    //
+    // // console.log(target.previousElementSibling);
+    // // console.log(target.nextElementSibling);
+    // // console.log(target.children);
+    // // console.log(target.childNodes);
+    //
+    // target.innerHTML = '<b>adqefuwef</b>'
+    // console.log(target.outerHTML);
+
+    let collectionOfDiv = document.getElementsByClassName('point');
+
+    for (const divElement of collectionOfDiv) {
+        divElement.innerText = 'quhfukaghf';
+        divElement.classList.add('qqq')
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" name="f1">
+    <input type="text" placeholder = "username" name = "userName">
+    <button> send username</button>
+</form>
+<form action="https://owu.com.ua/lms/courses/allinone/53928/" name="f2">
+    <input type="email" placeholder = "email" name = "userEmail">
+    <button> send email</button>
+
+
+</form>
+<script>
+            console.log(document.forms);
+            console.log(document.forms['f1']);
+            console.log(document.forms['f1']['userName']);
+
+            console.log(document.forms.f2.userEmail)
+
+</script>
+
+</body>
+</html>

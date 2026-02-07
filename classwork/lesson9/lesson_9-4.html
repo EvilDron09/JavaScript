@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .user{
+            background: silver;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!--<ul class="users"></ul>-->
+<script>
+
+    // let h2 = document.createElement('h2');
+    // h2.innerText = 'some title';
+    // document.body.appendChild(h2);
+
+    // let allUsersDiv = document.getElementsByClassName('users')[0];
+    // let users = [
+    //     {name: 'name1', age: 31, status: false},
+    //     {name: 'name2', age: 21, status: true},
+    //     {name: 'name3', age: 20, status: false},
+    //     {name: 'name4', age: 19, status: true},
+    //     {name: 'name5', age: 38, status: false},
+    //     {name: 'name6', age: 36, status: true},
+    //     {name: 'name7', age: 33, status: false},
+    //     {name: 'name8', age: 28, status: true},
+    //     {name: 'name9', age: 26, status: false},
+    //     {name: 'name10', age: 18, status: true},
+    //     {name: 'name11', age: 40, status: false},
+    // ];
+    // for (const user of users) {
+    //     let div = document.createElement('div');
+    //     div.classList.add('user');
+    //     div.innerText = user.name;
+    //     allUsersDiv.appendChild(div);
+    // }
+
+
+    let users = [
+        {name: '1eqqwe', age: 31, status: false},
+        {name: 'n14r14rame2', age: 21, status: true},
+        {name: 'asfasfa', age: 20, status: false},
+        {name: 'nafagame4', age: 19, status: true},
+        {name: 'naagfwgme5', age: 38, status: false},
+        {name: 'naqwtgme6', age: 36, status: true},
+        {name: 'naFSFSAme7', age: 33, status: false},
+        {name: 'name8', age: 28, status: true},
+        {name: 'naWGASme9', age: 26, status: false},
+        {name: 'nawfsfme10', age: 18, status: true},
+        {name: 'nagegsdme11', age: 40, status: false},
+    ];
+
+    for (const user of users) {
+        let userInfoDiv = document.createElement('div');
+
+        let h2 = document.createElement('h2');
+        h2.innerText = user.name;
+
+        let p = document.createElement('p');
+        p.innerText = user.status + ' ' + user.age;
+
+        userInfoDiv.append(h2,p);
+        // userInfoDiv.appendChild(h2);
+        // userInfoDiv.appendChild(p);
+
+        document.body.appendChild(userInfoDiv);
+    }
+</script>
+</body>
+</html>
