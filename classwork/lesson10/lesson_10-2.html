@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // localStorage.setItem('asd', 'qwe');
+    // let item = localStorage.getItem('asd');
+    // console.log('item');
+    // localStorage.clear();
+
+    // localStorage.setItem('user', JSON.stringify({id:1, name:'kokos'}));
+    //
+    // let userJSON = localStorage.getItem('user');
+    // console.log(userJSON);
+    // let user = JSON.parse(userJSON);
+    // console.log(user);
+    // user.age  = 31;
+    // console.log(user);
+    // let stringify = JSON.stringify(user);
+    // localStorage.setItem('user', stringify);
+    //
+    // let users = [
+    //     {id:1, name: 'name1', age:31, statys:true},
+    //     {id:1, name: 'name2', age:31, statys:true},
+    //     {id:1, name: 'name3', age:31, statys:true},
+    //     {id:1, name: 'name4', age:31, statys:true},
+    //     {id:1, name: 'name5', age:31, statys:true},
+    //     {id:1, name: 'name6', age:31, statys:true},
+    //     {id:1, name: 'name7', age:31, statys:true},
+    //     {id:1, name: 'name8', age:31, statys:true},
+    //     {id:1, name: 'name9', age:31, statys:true},
+    //     {id:1, name: 'name10', age:31, statys:true}
+    // ];
+    // localStorage.setItem('users',JSON.stringify(users))
+
+    let usersJSON = localStorage.getItem('users');
+    console.log(usersJSON);
+    let users = JSON.parse(usersJSON);
+    console.log(users);
+    users.push({});
+    console.log(users);
+
+    localStorage.setItem('users',JSON.stringify(users));
+</script>
+</body>
+</html>

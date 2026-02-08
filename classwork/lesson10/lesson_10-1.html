@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #target{
+         height: 200px;
+            width: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id ='target'></div>
+<!--<form id="f1">-->
+    <input id ="i1" name = "username">
+    <button>send</button>
+<!--</form>-->
+
+
+<script>
+
+//     let target = document.getElementById('target');
+//     target.onclick = function (ey) {
+//         console.log('click');
+//         console.log(ey);
+//    };
+    // target.onmousemove = function (ey) {
+    //     console.log(ey.clientX, ey.clientY);
+    //     // let r = ey.clientX;
+    //     // let g = ey.clientX;
+    //     // let b = ey.clientY;
+    //     // this.style.background = `rgb(${r},${g},${b})`;
+    //
+    // }
+
+    // target.addEventListener('click', function(ey){
+    //     console.log('qehfjqwhf');
+    // })
+    // target.addEventListener('click', function(ey){
+    //     console.log('qehfjqwhf');
+    // })
+    // target.addEventListener('click', function(ey){
+    //     console.log('qehfjqwhf');
+    // })
+    // target.addEventListener('click', function(ey){
+    //     console.log('qehfjqwhf');
+    // })
+
+    // target.onmouseover = function(){
+    // console.log('over');
+    //  };
+    // target.onmouseleave = function(){
+    //      console.log('leave');
+    //  };
+
+// let i1 = document.getElementById('i1');
+// i1.oninput = function(){
+//     console.log(this.value);
+// };
+
+// let target = document.getElementById('target');
+//
+// let i1 = document.getElementById('i1');
+// i1.oninput = function(){
+//     target.innerText = this.value;
+// };
+
+// let f1 = document.forms.f1;
+// f1.onsubmit = function(ev) {
+//     ev.preventDefault();
+//     console.log('hello');
+//     let user = {name: this.username.value}
+//     console.log(user);
+// }
+
+window.onload = function(){
+    console.log('load');
+};
+
+document.onreadystatechange = function(){
+    // console.log(document.readyState);
+    if(document.readyState === 'interactive'){
+        document.body.innerText = 'loading start...'
+    }
+    if(document.readyState === 'complete'){
+        document.body.innerText = 'loading complete'
+    }
+};
+</script>
+</body>
+</html>
