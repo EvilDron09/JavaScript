@@ -23,7 +23,14 @@ ageAdmission.onsubmit = function (e) {
 //При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд, нічого не відбувається
 
 let sum = +localStorage.getItem('number') || 100
-
+let date = Date.now()
+let visit = +localStorage.getItem('time')|| date
+if(date-visit > 10000){
+    sum+=10;
+    localStorage.setItem('number', sum);
+    localStorage.setItem('time', date);
+    document.getElementById('sum').innerText = sum;
+}
 
 // #NKB0tgWIK1G
 // ***PAGINATION
@@ -31,3 +38,37 @@ let sum = +localStorage.getItem('number') || 100
 // при завантаженні сторінки з’являються перші 10 об’єктів.
 // При натисканні next виводяться наступні 10 об’єктів.
 // При натисканні prev виводяться попередні 10 об’єктів.
+
+const nums = Array.from({length: 100} ,(num , index) =>index+1);
+let currentPage = 1
+const elementPage = 10
+const mathCeil = Math.ceil(nums.length/elementPage);
+
+ function changePage(page) {
+     const ulList = document.getElementById('ul');
+     ulList.innerHTML = '';
+     const start = (page -1) * elementPage;
+     const end = start + elementPage;
+     const sliceArr = nums.slice(start,end);
+     sliceArr.forEach(value => {
+         const li = document.createElement('li');
+         li.innerText = `${value}`;
+         ulList.appendChild(li)
+     })
+ }
+
+ document.getElementById('prev').addEventListener('click', () => {
+     if(currentPage > 1){
+         currentPage --;
+         changePage(currentPage);
+     }
+})
+
+document.getElementById('next').addEventListener('click', () =>{
+    if(currentPage < mathCeil){
+        currentPage++;
+        changePage(currentPage);
+    }
+})
+
+changePage(currentPage);
