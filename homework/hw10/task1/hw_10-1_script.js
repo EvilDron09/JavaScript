@@ -11,6 +11,7 @@ button.addEventListener('click', ()=>{
 // Створити форму з трьома полями для name, surname, age та кнопкою. При натисканні на кнопку зчитати дані з полів, та вивести об’єкт в документ.
 // Іншими словами : заповнили форму, натиснули кнопку, під формою з’явився блок з вашим об’єктом.
 
+const divForm = document.createElement('div')
 const someForm = document.forms.form;
 someForm.addEventListener('submit', (e) =>{
     e.preventDefault();
@@ -19,7 +20,9 @@ someForm.addEventListener('submit', (e) =>{
     const age = someForm.age.value;
     let obj = {name,surname,age};
     localStorage.setItem('obj',JSON.stringify(obj))
+    divForm.append(`${name}, ${surname}, ${age}`);
 })
+document.body.appendChild(divForm);
 
 // #2VaLt4vDczH
 // є сторінка, на якій є блок, в кому знаходиться цифра. Написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
