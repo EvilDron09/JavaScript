@@ -4,7 +4,9 @@ let divProductsCarts = document.getElementById('carts');
 fetch('https://dummyjson.com/carts')
     .then(res => res.json())
     .then((value) =>{
+
         // console.log(value)
+
         let {carts} = value
         for (const {id, products, total, discountedTotal, totalProducts, totalQuantity, userId} of carts) {
             let divCart = document.createElement('div');
