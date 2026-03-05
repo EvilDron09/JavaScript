@@ -229,3 +229,81 @@ for (const item of qwes) {
     }
 }
 console.log(probel);
+
+// #0pm3EyTKy9
+// – Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.
+
+const array =[];
+array[0] = 12;
+array[1] = 'name';
+array[2] = true;
+array[3] = {};
+array[4] = false;
+array[5] = 45;
+array[6] = NaN;
+array[7] = 'vasya';
+array[8] = undefined;
+array[9] = 15;
+for (const arrayElement of array) {
+    console.log(arrayElement);
+}
+console.log(probel);
+// #mDMWMW5a
+// – Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+    document.write(`<div>`)
+         document.write(`${i},`);
+    document.write(`</div>`)
+}
+document.write(probel);
+console.log(probel);
+// #4sXhaa5YMM
+// – Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+
+for (let i = 0; i < 100; i++) {
+    console.log(i);
+    document.write(`<div>`)
+         document.write(`${i}`);
+    document.write(`</div>`)
+}
+document.write(probel);
+console.log(probel);
+// #s24slNyz7
+// – Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+
+for (let i = 0; i < 100; i+=2) {
+    console.log(i);
+    document.write(`<div>`)
+         document.write(`${i}`);
+    document.write(`</div>`)
+}
+document.write(probel);
+console.log(probel);
+
+// #zananT5FR1
+// – Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+
+for (let i = 0; i < 100; i++) {
+    if(i%2===0){
+        console.log(i);
+        document.write(`<div>`)
+        document.write(`${i}`);
+        document.write(`</div>`)
+    }}
+document.write(probel);
+console.log(probel);
+
+// #Tfrwls7FM
+// – Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+
+for (let i = 0; i < 100; i++) {
+    if(i%2!==0){
+        console.log(i);
+        document.write(`<div>`)
+        document.write(`${i}`);
+        document.write(`</div>`)
+    }}
+document.write(probel);
+console.log(probel);
