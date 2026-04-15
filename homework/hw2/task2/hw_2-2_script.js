@@ -9,6 +9,7 @@ let coursesAndDurationArray = [
     {title: 'Frontend', monthDuration: 4},
 ];
 
+
 if( coursesAndDurationArray[1].monthDuration > 5){
     console.log('Супер!')
 }else {
